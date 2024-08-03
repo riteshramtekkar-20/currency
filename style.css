@@ -104,7 +104,8 @@ i.fa-solid.fa-arrow-right-arrow-left {
   color: #333;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  
+  position: relative;
+  top: 13px;
 }
 
 form button {
