@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,136 +14,125 @@ body {
 
 .container {
   background-color: #ffbe98;
-  padding: 5rem;
-  border-radius: 5rem;
+  padding: 2rem; 
+  border-radius: 1rem;
   border: 1.5px solid grey;
   min-height: 45vh;
-  width: 20%; 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+  width: 90%; 
+  max-width: 600px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 1rem; 
 }
 
-
 h2 {
-  font-size: 2.5rem; 
-  font-family: 'Arial Black', sans-serif; 
-  margin-bottom: 1rem; 
+  font-size: 2rem; 
+  font-family: 'Arial Black', sans-serif;
+  margin-bottom: 1rem;
   text-align: center;
   background-color: #feece2;
   border-radius: 0.5rem;
 }
 
-
-form select,button,input {
+form select, button, input {
   width: 100%;
   border: none;
   outline: none;
   border-radius: 0.75rem;
 }
-.from {
+
+.from, .to, .amount {
   font-size: 1rem;
-  font-family:'Arial Black', sans-serif; 
+  font-family: 'Arial Black', sans-serif;
 }
-.to{
-  font-size: 1rem; 
-  font-family:'Arial Black', sans-serif; 
-  
-}
+
 .amount {
-  margin-bottom: 1rem; 
-  font-size: 1rem; 
-  font-family: 'Arial Black', sans-serif; 
-  
+  margin-bottom: 1rem;
 }
 
 .amount label {
-  font-size: 1.25rem; 
-  font-weight: bold; 
-  margin-bottom: 0.5rem; 
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .amount input {
   width: 100%;
-  border: 1px solid lightgray; 
-  border-radius: 0.75rem; 
+  border: 1px solid lightgray;
+  border-radius: 0.75rem;
   height: 3rem;
   padding-left: 0.5rem;
-  
 }
-
 
 .select-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #feece2;
-  width: 82%; 
-  height: 25px;
-  border-radius: 1rem; 
-  border: 1px solid rgb(10, 9, 9); 
-  padding: 0.5rem 1rem; 
-  transition: background-color 0.3s, transform 0.3s; 
+  width: 100%; 
+  height: auto; 
+  border-radius: 1rem;
+  border: 1px solid rgb(10, 9, 9);
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .select-container:hover {
-  background-color: #f0f0f0; 
-  transform: scale(1.05); 
+  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .select-container img {
-  max-width: 3rem; 
+  max-width: 2rem; 
 }
 
 .msg {
-  margin: 2rem 0 2rem 0;
+  margin: 1.5rem 0; 
   text-align: center;
   background: #fff;
   border-radius: 2rem;
-  font-size: 1rem; 
-  font-family: 'Arial Black', sans-serif; 
+  font-size: 1rem;
+  font-family: 'Arial Black', sans-serif;
 }
 
 i.fa-solid.fa-arrow-right-arrow-left {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
-  width: 30px;
+  height: 3rem; 
+  width: 3rem; 
   background-color: white;
-  font-size: 1.8rem;
+  font-size: 1.5rem; 
   font-weight: bold;
   color: #333;
-  border-radius:10px;
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   position: relative;
-  top: 10px;
-  left: 5px;
-  
+  top: 13px;
 }
-
 
 form button {
   height: 3rem;
   background-color: #fff1e9;
   color: black;
   font-style: oblique;
-  font-size: 1.5rem;
+  font-size: 1.2rem; 
   cursor: pointer;
-  transition: transform 0.3s; 
+  transition: transform 0.3s;
   border: 2px solid black;
 }
 
 form button:hover {
-  transform: scale(1.05) rotateY(10deg); 
+  transform: scale(1.05) rotateY(10deg);
 }
 
 .dropdown {
   display: flex;
-  align-items: center;
+  flex-direction: column; 
+  align-items: stretch;
 }
 
 .dropdown i {
   font-size: 1.5rem;
-  margin: 0 1rem; 
+  margin: 0.5rem 0; /
 }
 
 .dropdown .from,
@@ -152,6 +142,17 @@ form button:hover {
 }
 
 .dropdown label {
-  font-size: 1.25rem; 
-  margin-bottom: 0.5rem; 
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .dropdown {
+    flex-direction: row; 
+  }
+  
+  .dropdown .from,
+  .dropdown .to {
+    margin: 0 1rem;
+  }
 }
